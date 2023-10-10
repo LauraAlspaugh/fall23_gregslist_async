@@ -33,6 +33,7 @@
           <!-- NAVLINKS -->
           <a href="#/about" class="nav-link">About</a>
           <a href="#/cars" class="nav-link">Cars</a>
+          <a href="#/houses" class="nav-link">Houses</a>
         </div>
       </div>
       <div class="flex-grow-1 justify-content-end align-items-center d-flex" id="authstate"></div>
@@ -45,6 +46,97 @@
 
     <section id="router-view">
       <!-- primary viewport -->
+      <div class="container-fluid">
+        <section class="row">
+          <div class="col-12 p-3">
+            <h1>Houses</h1>
+          </div>
+        </section>
+
+        <section id="houseForm" class="row justify-content-center">
+          <div class="col-10 col-md-8 p-4">
+            <form onsubmit="app.HousesController.createHouse(event)">
+
+              <div class="mb-2">
+                <label for="year">Year</label>
+                <input id="year" type="text" name="year" required placeholder="Year...">
+              </div>
+
+              <div class="mb-2">
+                <label for="name">Name</label>
+                <input id="name" type="text" name="name" required placeholder="Name...">
+              </div>
+
+              <div class="mb-2">
+                <label for="bedrooms">Number of Bedrooms</label>
+                <input id="bedrooms" type="text" name="bedrooms" required placeholder="Number of bedrooms...">
+              </div>
+
+              <div class="mb-2">
+                <label for="bathrooms">Number of Bathrooms</label>
+                <input id="bathrooms" type="text" name="bathrooms" required placeholder="Number of bathrooms...">
+              </div>
+
+              <div class="mb-2">
+                <label for="levels">Levels</label>
+                <input id="levels" type="text" name="levels" required placeholder="Levels...">
+              </div>
+
+              <div class="mb-2">
+                <label for="price">Price</label>
+                <input id="price" type="text" name="price" required placeholder="Price...">
+              </div>
+
+              <div class="mb-2">
+                <label for="description">Description</label>
+                <input id="description" type="text" name="description" maxlength="500" placeholder="Description...">
+              </div>
+
+              <div class="mb-2">
+                <label for="imgUrl">Image Url</label>
+                <input id="imgUrl" type="text" name="imgUrl" maxlength="500" placeholder="Image Url...">
+              </div>
+
+
+              <div>
+                <button class="btn btn-success" type="submit">Submit</button>
+              </div>
+
+
+
+
+
+            </form>
+          </div>
+        </section>
+
+        <section id="houseCards" class="row justify-content-center">
+          <div class="col-10">
+            <div class="d-flex shadow">
+              <img class="house-image"
+                src="https://images.unsplash.com/photo-1505843513577-22bb7d21e455?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fGFsYWJhbWElMjBtYW5zaW9ufGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60">
+              <div class="p-3">
+                <h2>Name</h2>
+                <p>Bedrooms Bathrooms</p>
+                <p>Levels</p>
+                <p>Price</p>
+                <p>Year</p>
+                <p>Created At</p>
+                <p>Updated At</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque laborum sint deserunt rerum animi a
+                  eum
+                  necessitatibus at, culpa architecto.</p>
+                <div class="">
+                  <img src="" alt="">
+                  <p>Creator Name</p>
+                  <button onclick="app.HousesController.removeCar('${this.id}')" class="btn btn-danger">Delete
+                    House</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
     </section>
 
