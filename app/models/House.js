@@ -25,7 +25,7 @@ export class House {
             <img class="house-image"
                 src="${this.imgUrl}">
             <div class="p-3">
-                <h2>Name</h2>
+                <h2>Home For Sale</h2>
                 <p>Bedrooms: ${this.bedrooms}  Bathrooms: ${this.bathrooms}</p>
                 <p>Levels: ${this.levels}</p>
                 <p>Price: ${this.price}</p>
